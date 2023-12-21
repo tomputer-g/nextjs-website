@@ -110,6 +110,15 @@ export const Blog = defineDocumentType(() => ({
   },
 }))
 
+export const GraphData = defineDocumentType(() => ({
+  name: 'GraphData',
+  filePathPattern: 'graphdata.json',
+  fields: {
+    nodes: { type: 'list', of: { type: 'json' } },
+    edges: { type: 'list', of: { type: 'json' } },
+  },
+}))
+
 export const Authors = defineDocumentType(() => ({
   name: 'Authors',
   filePathPattern: 'authors/**/*.mdx',
@@ -130,7 +139,7 @@ export const Authors = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors],
+  documentTypes: [Blog, Authors, GraphData],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
