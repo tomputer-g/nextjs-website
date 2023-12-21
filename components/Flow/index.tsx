@@ -10,49 +10,18 @@ import ReactFlow, {
   Edge,
   ConnectionLineType,
 } from 'reactflow'
-import CustomNode from './CustomNode'
+// import CustomNode from './CustomNode'
 import styles from './Flow.module.css'
 
 import GraphData from '@/data/graphdata.json'
 
-// const initialNodes: Node[] = [
-//   {
-//     id: '1',
-//     type: 'input',
-//     data: { label: 'Node 1' },
-//     position: { x: 250, y: 5 },
-//   },
-//   {
-//     id: '2',
-//     data: { label: 'Node 2' },
-//     position: { x: 100, y: 100 },
-//   },
-//   {
-//     id: '3',
-//     data: { label: 'Node 3' },
-//     position: { x: 400, y: 100 },
-//   },
-//   {
-//     id: '4',
-//     data: { label: 'Node 4' },
-//     position: { x: 400, y: 200 },
-//     type: 'custom',
-//     className: styles.customNode,
-//   },
-// ]
-
-// const initialEdges: Edge[] = [
-//   { id: 'e1-2', source: '1', target: '2' },
-//   { id: 'e1-3', source: '1', target: '3' },
-// ]
-
 const nodeTypes = {
-  custom: CustomNode,
+  // custom: CustomNode,
 }
 
 const defaultEdgeOptions = {
   animated: true,
-  type: 'smoothstep',
+  type: 'simplebezier',
 }
 
 function Flow() {
@@ -79,10 +48,10 @@ function Flow() {
   const onConnect = useCallback(
     (params: Connection | Edge) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
-  )
+  )  
 
   return (
-    <div className={styles.flow} style={{ height: 800 }}>
+    <div className={styles.flow + "overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700"} style={{ height: 800 }}>
       <ReactFlow
         nodes={nodes}
         onNodesChange={onNodesChange}
@@ -92,8 +61,12 @@ function Flow() {
         nodeTypes={nodeTypes}
         defaultEdgeOptions={defaultEdgeOptions}
         connectionLineType={ConnectionLineType.SmoothStep}
-        fitView
-      />
+        fitView>
+        {/* <div className="save__controls">
+          <button onClick={onSave}>save</button>
+          <button onClick={onAdd}>add node</button>
+        </div> */}
+        </ReactFlow>
     </div>
   )
 }
