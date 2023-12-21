@@ -60,7 +60,7 @@ function Flow() {
         onConnect={onConnect}
         nodeTypes={nodeTypes}
         defaultEdgeOptions={defaultEdgeOptions}
-        connectionLineType={ConnectionLineType.SmoothStep}
+        connectionLineType={ConnectionLineType.SimpleBezier}
         fitView>
         {/* <div className="save__controls">
           <button onClick={onSave}>save</button>

@@ -2,29 +2,126 @@
   "type": "GraphData",
   "nodes": [
     {
-      "id": "1",
+      "id": "Engineering",
       "type": "input",
       "data": { "label": "Engineering" },
-      "position": { "x": 250, "y": 5 }
+      "position": { "x": 250, "y": 1 }
     },
     {
-      "id": "2",
+      "id": "ProjectMan",
+      "data": { "label": "Project Management" },
+      "position": { "x": 0, "y": 100 }
+    },
+    {
+      "id": "Hardware",
       "data": { "label": "Hardware" },
-      "position": { "x": 100, "y": 100 }
+      "position": { "x": 300, "y": 100 }
     },
     {
-      "id": "3",
+      "id": "Electronics",
+      "data": { "label": "Electronics" },
+      "position": { "x": 600, "y": 100 }
+    },
+    {
+      "id": "Software",
       "data": { "label": "Software" },
-      "position": { "x": 400, "y": 100 }
+      "position": { "x": 1200, "y": 100 }
     },
     {
-      "id": "4",
-      "data": { "label": "Node 4" },
-      "position": { "x": 400, "y": 200 }
+      "id": "CircuitDes",
+      "data": { "label": "CircuitDesign" },
+      "position": { "x": 450, "y": 200 }
+    },
+    {
+      "id": "PCBIter",
+      "data": { "label": "PCB Iteration" },
+      "position": { "x": 600, "y": 200 }
+    },
+    {
+      "id": "Soldering",
+      "data": { "label": "Soldering" },
+      "position": { "x": 750, "y": 200 }
+    },
+    {
+      "id": "THSoldering",
+      "data": { "label": "Thru-Hole Soldering" },
+      "position": { "x": 675, "y": 275 }
+    },
+    {
+      "id": "SMDSoldering",
+      "data": { "label": "SMD Soldering" },
+      "position": { "x": 825, "y": 275 }
+    },
+    {
+      "id": "Microcontrollers",
+      "data": { "label": "Microcontrollers" },
+      "position": { "x": 950, "y": 200 }
+    },
+    {
+      "id": "EmbeddedSys",
+      "data": { "label": "Embedded Systems" },
+      "position": { "x": 1100, "y": 200 }
+    },
+    {
+      "id": "General",
+      "data": { "label": "General" },
+      "position": { "x": 1250, "y": 200 }
+    },
+    {
+      "id": "Robotics",
+      "data": { "label": "Robotics" },
+      "position": { "x": 1400, "y": 200 }
+    },
+    {
+      "id": "AITransformers",
+      "data": { "label": "AI/Transformers" },
+      "position": { "x": 1550, "y": 200 }
+    },
+    {
+      "id": "Making",
+      "data": { "label": "Making" },
+      "position": { "x": 250, "y": 200 }
+    },
+    {
+      "id": "3DModeling",
+      "data": { "label": "3D Modeling" },
+      "position": { "x": 250, "y": 300 }
+    },
+    {
+      "id": "3DPrinting",
+      "data": { "label": "3D Printing" },
+      "position": { "x": 100, "y": 300 }
+    },
+    {
+      "id": "SLAPrinting",
+      "data": { "label": "SLA Printing" },
+      "position": { "x": 25, "y": 375 }
+    },
+    {
+      "id": "FDMPrinting",
+      "data": { "label": "FDM Printing" },
+      "position": { "x": 175, "y": 375 }
     }
   ],
   "edges": [
-    { "id": "e1-2", "source": "1", "target": "2" },
-    { "id": "e1-3", "source": "1", "target": "3" }
+    { "id": "e1", "source": "Engineering", "target": "Hardware" },
+    { "id": "e2", "source": "Engineering", "target": "Software" },
+    { "id": "e7", "source": "Engineering", "target": "ProjectMan" },
+    { "id": "e9", "source": "Engineering", "target": "Electronics" },
+    { "id": "e3", "source": "Software", "target": "Microcontrollers" },
+    { "id": "e16", "source": "Software", "target": "EmbeddedSys" },
+    { "id": "e19", "source": "Software", "target": "General" },
+    { "id": "e17", "source": "Software", "target": "Robotics" },
+    { "id": "e18", "source": "Software", "target": "AITransformers" },
+    { "id": "e4", "source": "Hardware", "target": "Making" },
+    { "id": "e5", "source": "Making", "target": "3DModeling" },
+    { "id": "e6", "source": "Making", "target": "3DPrinting" },
+    { "id": "e12", "source": "3DPrinting", "target": "SLAPrinting" },
+    { "id": "e13", "source": "3DPrinting", "target": "FDMPrinting" },
+    { "id": "e8", "source": "Electronics", "target": "CircuitDes" },
+    { "id": "e10", "source": "Electronics", "target": "PCBIter" },
+    { "id": "e11", "source": "Electronics", "target": "Soldering" },
+    { "id": "e14", "source": "Soldering", "target": "THSoldering" },
+    { "id": "e15", "source": "Soldering", "target": "SMDSoldering" }
   ]
 }
